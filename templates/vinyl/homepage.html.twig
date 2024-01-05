@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Create a new Record | {{ parent() }}{% endblock %}
+
+{% block body %}
+<h1>{{ title }}</h1>
+
+{# TODO: add an image ot the record #}
+
+<div>
+    Our schweet track list:
+
+    <ul>
+        {% for track in tracks %}
+            <li>{{ track.song }} - {{ track.artist|upper }}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% endblock %}
